@@ -23,7 +23,7 @@ def update(frame, line, pendulum_params, time_line, angle_line):
 
     return line, time_line, angle_line
 
-#Recieve value, solve the equation and Create graph
+#Receive value, solve the equation and Create graph
 def simulate_simple_pendulum(initial_conditions, total_time, g, L):
     solution = solve_ivp(
         fun=lambda t, y: simple_pendulum(t, y, g, L),
